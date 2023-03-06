@@ -2,8 +2,8 @@
 <html lang="en">
   
 <head>
-  <title>Motueka Bed and Breakfast</title>
-  <meta name="description" content="Bed and Breakfast home page" />
+  <title>Motueka Bed and Breakfast | Make a booking</title>
+  <meta name="description" content="Bed and Breakfast make a booking" />
   <meta name="keywords" content="B&B, bed and breakfast, Motueka, booking, accomodation, tasman, homestead" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
@@ -22,12 +22,12 @@
       <div id="menubar">
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="currentbookings.html">Current Bookings</a></li>
           <li><a href="bookingdetails.html">Booking Details</a></li>
-          <li><a href="makebooking.html">Make a Booking</a></li>
-          <li><a href="deletebooking.html">Delete a Booking</a></li>
-          <li><a href="privacy.html">Our Privacy Statement</a></li>
+          <li class="selected"><a href="makebooking.html">Make Booking</a></li>
+          <li><a href="deletebooking.html">Delete Booking</a></li>
+          <li><a href="privacy.html">Privacy Statement</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
@@ -60,18 +60,36 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Welcome to the black_white template</h1>
-        <p>This standards compliant, simple, fixed width website template is released as an 'open source' design (under a <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons Attribution 3.0 Licence</a>), which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...</p>
-        <p>This template is written entirely in <strong>HTML5</strong> and <strong>CSS</strong>, and can be validated using the links in the footer.</p>
-        <p>You can view more free HTML5 web templates <a href="http://www.html5webtemplates.co.uk">here</a>.</p>
-        <p>This template is a fully functional 5 page website, with an <a href="examples.html">examples</a> page that gives examples of all the styles available with this design.</p>
-        <h2>Browser Compatibility</h2>
-        <p>This template has been tested in the following browsers:</p>
-        <ul>
-          <li>Internet Explorer 9</li>
-          <li>FireFox 25</li>
-          <li>Google Chrome 31</li>
-        </ul>
+        <h1>Make a booking</h1>
+        <p>Complete the form below to book a room reservation:</p>
+        <form action="#" method="post">
+            <div class="form_settings">
+                <div class="dropdown">
+                    <label for="room">Room (name, type, beds)</label>
+                    <select name="room" id="room" required>
+                        <option value="kellie">Kellie S 5</option>
+                        <option value="herman">Herman D 5</option>
+                        <option value="scarlett">Scarlett D 2</option>
+                        <option value="jelani">Jelani s 2</option>
+                        <option value="sonya">Sonya S 5</option>
+                        <option value="miranda">Miranda S 4</option>
+                        <option value="helen">Helen S 2</option>
+                        <option value="octavia">Octavia D 3</option>
+                        <option value="gretchen">Gretchen S 5</option>
+                        <option value="bernard">Bernard S 5</option>
+                        <option value="darcy">Darcy D 2</option>
+                        <option value="preston">Preston D 2</option>
+                        <option value="dane">Dane S 4</option>
+                        <option value="cole">Cole S 1</option>
+                    </select>
+                </div>
+              <p><span>Check in date</span><input class="date" type="text" name="checkindate" value="" /></p>
+              <p><span>Check out date</span><input class="date" type="text" name="checkoutdate" value="" /></p>
+              <p><span>Contact number</span><input class="contactnumber" type="text" name="contactnumber" value="" /></p>
+              <p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
+              <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>          
+            </div>
+        </form>
       </div>
     </div>
     <div id="footer">

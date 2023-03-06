@@ -179,7 +179,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 { color: #7E2451;
   text-decoration: none;} 
 
-#content
+#content /* can my dropdowns be styled using this?*/
 { text-align: left;
   float: left;
   width: 595px;
@@ -239,7 +239,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   
 .form_settings input, .form_settings textarea
 { padding: 5px; 
-  width: 299px; 
+  width: 200px; 
   font: 100% arial; 
   border: 1px solid #E5E5DB; 
   background: #FFF; 
@@ -290,3 +290,18 @@ table tr td
 { background: #F0EFE2;
   color: #47433F;
   border-top: 1px solid #FFF;}
+
+/* style dropdown items */
+.dropdown select
+{ padding: 0 0 5px 0; 
+  margin: 0 0 5px 0;
+  width: 212px; 
+  font: 100% arial;
+  border: 1px solid #E5E5DB; 
+  background: #FFF; 
+  color: #47433F;
+  height: 26px;}
+
+  label
+  {display: inline-block;
+  width: 196px;}
