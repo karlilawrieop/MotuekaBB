@@ -179,7 +179,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 { color: #7E2451;
   text-decoration: none;} 
 
-#content /* can my dropdowns be styled using this?*/
+#content
 { text-align: left;
   float: left;
   width: 595px;
@@ -302,6 +302,12 @@ table tr td
   color: #47433F;
   height: 26px;}
 
-  label
-  {display: inline-block;
-  width: 196px;}
+/* style labels on makebooking */
+label
+{display: inline-block;
+width: 196px;}
+
+/* increases height of extra box in makebooking */
+.extra
+{height: 52px;}
+
