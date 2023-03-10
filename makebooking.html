@@ -67,7 +67,8 @@
             <div class="form_settings">
                 <div class="dropdown">
                     <label for="room">Room (name, type, beds)</label>
-                    <select name="room" id="room" required>
+                    <select name="room" id="room">
+                        <option selected value="default">--select--</option>
                         <option value="kellie">Kellie S 5</option>
                         <option value="herman">Herman D 5</option>
                         <option value="scarlett">Scarlett D 2</option>
@@ -86,7 +87,8 @@
                 </div>
                 <div class="dropdown">
                     <label for="guest">Number of guests</label>
-                    <select name="guest" id="guest" required>
+                    <select name="guest" id="guest">
+                        <option selected value="default">--select--</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -95,17 +97,21 @@
                         <option value="6">6</option>
                     </select>
                 </div>
-              <p><span>Check in date</span><input class="date" type="text" name="checkindate" value="" /></p>
-              <p><span>Check out date</span><input class="date" type="text" name="checkoutdate" value="" /></p>
+              <p><span>Check in date</span><input class="date" type="text" id="checkindate" name="checkindate" value="" /></p>
+              <p><span>Check out date</span><input class="date" type="text" id="checkoutdate" name="checkoutdate" value="" /></p>
               <br>
-              <p><span>First Name</span><input class="name" type="text" name="fname" value="" /></p>
-              <p><span>Last Name</span><input class="name" type="text" name="lname" value="" /></p>
-              <p><span>Contact number</span><input class="contact" type="text" name="phone" value="" /></p>
-              <p><span>Email Address</span><input class="contact" type="text" name="email" value="" /></p>
+              <p><span>First Name</span><input class="name" type="text" id="fname" name="fname" value="" /></p>
+              <p><span>Last Name</span><input class="name" type="text" id="lname" name="lname" value="" /></p>
+              <p><span>Contact number</span><input class="contact" type="text" id="phone" name="phone" value="" /></p>
+              <p><span>Email Address</span><input class="contact" type="text" id="email" name="email" value="" /></p>
               <br>
               <p><span>Booking Extras</span><input class="extra" type="text" name="extra" value="" /></p>
               <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p> 
-            <!-- add a clear button --> 
+            <!-- add a clear button - doesn;t work anymore?--> 
+            <input type ="reset" value = "clear form" onclick="document.value = ''">
+            <!-- <input type ="reset" value = "clear form" onclick="document.getElementById('checkindate', 'checkoutdate', 'fname', 'lname', 'phone', 'email').value = ''"> -->
+            <!-- add a line break --> 
+            <!-- add Search for room availability-->
             </div>
         </form>
       </div>
