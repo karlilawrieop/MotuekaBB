@@ -11,8 +11,7 @@ body
   color: #000;}
 
 p
-{ padding: 0 0 20px 0;
-  line-height: 1.7em;}
+{ line-height: 1.7em;}
 
 img
 { border: 0;}
@@ -314,5 +313,9 @@ label
 width: 196px;}
 
 /* make textareas (free text fields) static size */
-textarea {
-  resize: none;}
+textarea
+{resize: none;}
+
+/* style the fieldset areas */
+fieldset
+{padding-left: 20px;}
