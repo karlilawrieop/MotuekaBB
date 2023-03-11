@@ -60,11 +60,28 @@
         </form>
       </div>
       <div id="content">
-        <!-- insert the page content here -->
-        <h1>Welcome to the black_white template</h1>
-        <p>The Current Bookings page lists the current bookings. It does not currently include
-          filtering by a Customer but instead lists all available bookings. You may add filtering by
-          a Customer or by date period</p>
+        <!-- Current Booking content -->
+        <h1>Current Bookings</h1>
+        <a href="makebooking.html">[Make a booking]</a>&nbsp;&nbsp;
+        <a href="index.html">[Return to main page]</a>
+        <!-- tabular data for rooms -->
+        <table>
+          <tr>
+            <th>Booking (room, dates)</th>
+            <th>Customer</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>Herman, 2022-10-10, 2022-12-10</td>
+            <td>Baldwin, Forrest</td>
+            <td><a href="bookingdetails.html">[View]</a> <a href="editbooking.html">[Edit]</a> [manage reviews] <a href="deletebooking.html">[Delete]</a></td>
+          </tr>
+          <tr>
+            <td>Sonya, 2022-07-01, 2022-07-20</td>
+            <td>Walker, Irene</td>
+            <td><a href="bookingdetails.html">[View]</a> <a href="editbooking.html">[Edit]</a> [manage reviews] <a href="deletebooking.html">[Delete]</a></td>
+          </tr>
+        </table>
       </div>
     </div>
     <div id="footer">
