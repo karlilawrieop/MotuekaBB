@@ -21,15 +21,15 @@
       </div>
       <div id="menubar">
         <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="index.html">Home</a></li>
-          <li><a href="currentbookings.html">Current Bookings</a></li>
-          <li><a href="bookingdetails.html">Booking Details</a></li>
-          <li class="selected"><a href="makebooking.html">Make Booking</a></li>
-          <li><a href="editbooking.html">Edit Booking</a></li>
-          <li><a href="deletebooking.html">Delete Booking</a></li>
-          <li><a href="privacy.html">Privacy Statement</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+        <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="currentbookings.html">Current Bookings</a></li>
+        <li><a href="bookingdetails.html">Booking Details</a></li>
+        <li class="selected"><a href="makebooking.html">Make Booking</a></li>
+        <li><a href="editbooking.html">Edit Booking</a></li>
+        <li><a href="deletebooking.html">Delete Booking</a></li>
+        <li><a href="privacy.html">Privacy Statement</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
@@ -60,15 +60,15 @@
         </form>
       </div>
       <div id="content">
-        <!-- insert the page content here -->
+        <!-- Make a booking -->
         <h1>Make a booking</h1>
         <p>Complete the form below to book a room reservation:</p>
-        <form action="#" method="post">
+        <!-- <form action="#" method="post"> commented out as not ready to post-->
             <div class="form_settings">
                 <div class="dropdown">
-                    <label for="room">Room (name, type, beds)</label>
-                    <select name="room" id="room">
-                        <option selected value="default">--select--</option>
+                    <label for="rooms">Room (name, type, beds)</label>
+                    <select name="rooms" id="rooms" required>
+                        <option value="" disabled selected>--select--</option>
                         <option value="kellie">Kellie S 5</option>
                         <option value="herman">Herman D 5</option>
                         <option value="scarlett">Scarlett D 2</option>
@@ -79,16 +79,17 @@
                         <option value="octavia">Octavia D 3</option>
                         <option value="gretchen">Gretchen S 5</option>
                         <option value="bernard">Bernard S 5</option>
-                        <option value="darcy">Darcy D 2</option>
+                        <option value="dacey">Dacey D 2</option>
                         <option value="preston">Preston D 2</option>
                         <option value="dane">Dane S 4</option>
                         <option value="cole">Cole S 1</option>
                     </select>
                 </div>
+                <!--
                 <div class="dropdown">
                     <label for="guest">Number of guests</label>
-                    <select name="guest" id="guest">
-                        <option selected value="default">--select--</option>
+                    <select name="guest" id="guest" required>
+                        <option value="" disabled selected>--select--</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -97,23 +98,122 @@
                         <option value="6">6</option>
                     </select>
                 </div>
-              <p><span>Check in date</span><input class="date" type="text" id="checkindate" name="checkindate" value="" /></p>
-              <p><span>Check out date</span><input class="date" type="text" id="checkoutdate" name="checkoutdate" value="" /></p>
+              -->
+              <p><span>Check in date</span><input class="date" type="date" id="checkindate" name="checkindate" value="" required min=""/></p>
+              <p><span>Check out date</span><input class="date" type="date" id="checkoutdate" name="checkoutdate" value="" required/></p>
               <br>
-              <p><span>First Name</span><input class="name" type="text" id="fname" name="fname" value="" /></p>
-              <p><span>Last Name</span><input class="name" type="text" id="lname" name="lname" value="" /></p>
-              <p><span>Contact number</span><input class="contact" type="text" id="phone" name="phone" value="" /></p>
-              <p><span>Email Address</span><input class="contact" type="text" id="email" name="email" value="" /></p>
+              <p><span>Contact number</span><input class="contact" type="number" id="phone" name="phone" placeholder="(###)-###-###" value="" required/></p>
+              <p><span>Email Address</span><input class="contact" type="email" id="email" name="email" value="" required/></p>
               <br>
-              <p><span>Booking Extras</span><input class="extra" type="text" name="extra" value="" /></p>
+              <p><span>Booking Extras</span><textarea id="extras", name="booking extras", rows="3"></textarea></p>
+              <!-- submit button --> 
               <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p> 
-            <!-- add a clear button - doesn;t work anymore?--> 
-            <input type ="reset" value = "clear form" onclick="document.value = ''">
-            <!-- <input type ="reset" value = "clear form" onclick="document.getElementById('checkindate', 'checkoutdate', 'fname', 'lname', 'phone', 'email').value = ''"> -->
-            <!-- add a line break --> 
-            <!-- add Search for room availability-->
+              <!-- clear button --> 
+              <input class="reset" type ="reset" value = "reset form" onclick="document.value = ''">
+              <!-- add a line break --> 
+              <br>
+              <br>
+              <hr>
+              <!-- room availability-->
+              <h1>Search for room availability</h1>
+              <p>Use the search below to find what rooms are available for your selected dates <br><br></p>
+              <p><span>start date</span><input class="date" type="date" id="startdate" name="startdate" value="" /></p>
+              <p><span>end date</span><input class="date" type="date" id="enddate" name="enddate" value="" /></p>
+              <button class = "button", type="button">Search availability</button>
+              <!-- tabular data for rooms -->
+              <table>
+                <tr>
+                  <th>Room #</th>
+                  <th>Room name</th>
+                  <th>Room type</th>
+                  <th>Beds</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Kellie</td>
+                  <td>S</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Herman</td>
+                  <td>D</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Scarlett</td>
+                  <td>D</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Jelani</td>
+                  <td>S</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Sonya</td>
+                  <td>S</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Miranda</td>
+                  <td>S</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Helen</td>
+                  <td>S</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Octavia</td>
+                  <td>D</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Gretchen</td>
+                  <td>D</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Bernard</td>
+                  <td>S</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Dacey</td>
+                  <td>D</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Preston</td>
+                  <td>D</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>Dane</td>
+                  <td>S</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>Cole</td>
+                  <td>S</td>
+                  <td>1</td>
+                </tr>
             </div>
-        </form>
+        <!-- </form> comment out as not ready to post -->
       </div>
     </div>
     <div id="footer">

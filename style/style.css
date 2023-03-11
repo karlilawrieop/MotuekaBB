@@ -195,6 +195,10 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   padding: 0 0 4px 25px;
   line-height: 1.5em;}
 
+#content input
+{ display: inline-block;
+box-sizing: border-box;}
+
 #footer
 { width: 898px;
   font: normal 100% 'lucida sans unicode', arial, sans-serif;
@@ -244,12 +248,13 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   border: 1px solid #E5E5DB; 
   background: #FFF; 
   color: #47433F;}
-  
-.form_settings .submit
+
+/* style buttons */  
+.form_settings .submit, .form_settings .reset, .button
 { font: 100% arial; 
   border: 1px solid; 
   width: 99px; 
-  margin: 0 0 0 212px; 
+  margin: 0 0 0 0px; 
   height: 40px;
   padding: 2px 0 3px 0;
   cursor: pointer; 
@@ -296,7 +301,7 @@ table tr td
 .dropdown select
 { padding: 0 0 5px 0; 
   margin: 0 0 5px 0;
-  width: 212px; 
+  width: 200px; 
   font: 100% arial;
   border: 1px solid #E5E5DB; 
   background: #FFF; 
@@ -308,6 +313,6 @@ label
 {display: inline-block;
 width: 196px;}
 
-/* increases height of extra box in makebooking */
-.extra
-{height: 52px;}
+/* make textareas (free text fields) static size */
+textarea {
+  resize: none;}
