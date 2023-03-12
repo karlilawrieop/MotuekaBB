@@ -60,13 +60,29 @@
         </form>
       </div>
       <div id="content">
-        <!-- insert the page content here -->
-        <h1>Welcome to the black_white template</h1>
-        <p>??? The Booking preview before deletion page enables the user to confirm the deletion.
-            Only the booking gets deleted it will not affect the room or the Customer's
-            information. No checking is done to the dates to see if the booking is before the
-            current date. An addition to the code could ensure that such a booking should not be
-            available for deletion as the date period has already passed.</p>
+        <!-- Delete Booking content -->
+        <h1>Booking preview before deletion</h1>
+        <a href="currentbookings.html">[Return to booking details]</a>&emsp;
+        <a href="index.html">[Return to main page]</a>
+        <form>
+          <br>
+          <fieldset>
+            <legend>Booking detail #2</legend>
+            <br>
+            <p>Room name:</p>
+            <p><span class="indent">Herman</span></p>
+            <p>Check in date</p>
+            <p><span class="indent">10-10-2022</span></p>
+            <p>Check out date</p>
+            <p><span class="indent">10-12-2022</span></p>
+            <br>
+          </fieldset>
+          <h2>Are you sure you want to delete this booking?</h2>
+          <!-- Cancel button --> 
+          <button class="button", type="button">Cancel</button>&emsp;
+          <!-- delete button --> 
+          <button class="button", type="button">Delete</button>
+        </form>
       </div>
     </div>
     <div id="footer">

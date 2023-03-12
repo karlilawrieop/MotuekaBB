@@ -60,16 +60,65 @@
         </form>
       </div>
       <div id="content">
-        <!-- insert the page content here -->
-        <h1>Welcome to the black_white template</h1>
-        <p>The Current Bookings page lists the current bookings. It does not currently include
-          filtering by a Customer but instead lists all available bookings. You may add filtering by
-          a Customer or by date period</p>
-      </div>
+        <!-- edit booking content -->
+        <h1>Edit a booking</h1>
+        <a href="currentbookings.html">[Return to current bookings]</a>&emsp;
+        <a href="index.html">[Return to main page]</a>
+        <h2>Booking for Forrest Baldwin</h2>
+        <form action="#" method="post">
+          <div class="form_settings">
+              <div class="dropdown">
+                  <label for="rooms">Room (name, type, beds)</label>
+                  <select name="rooms" id="rooms" required>
+                      <option value="" disabled>--select--</option>
+                      <option value="kellie">Kellie S 5</option>
+                      <option selected value="herman">Herman D 5</option>
+                      <option value="scarlett">Scarlett D 2</option>
+                      <option value="jelani">Jelani S 2</option>
+                      <option value="sonya">Sonya S 5</option>
+                      <option value="miranda">Miranda S 4</option>
+                      <option value="helen">Helen S 2</option>
+                      <option value="octavia">Octavia D 3</option>
+                      <option value="gretchen">Gretchen S 5</option>
+                      <option value="bernard">Bernard S 5</option>
+                      <option value="dacey">Dacey D 2</option>
+                      <option value="preston">Preston D 2</option>
+                      <option value="dane">Dane S 4</option>
+                      <option value="cole">Cole S 1</option>
+                  </select>
+              </div>
+              <!--
+              <div class="dropdown">
+                  <label for="guest">Number of guests</label>
+                  <select name="guest" id="guest" required>
+                      <option value="" disabled selected>--select--</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                  </select>
+              </div>
+            -->
+            <p><span class="label">Check in date</span><input class="date" type="date" id="checkindate" name="checkindate" value="2022-10-10" required/></p>
+            <p><span class="label">Check out date</span><input class="date" type="date" id="checkoutdate" name="checkoutdate" value="2022-12-10" required/></p>
+            <br>
+            <p><span class="label">Contact number</span><input class="contact" type="tel" id="phone" name="phone" pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{4}" value="021-555-5555" required/></p>
+            <p><span class="label">Email Address</span><input class="contact" type="email" id="email" name="email" value="Forrest@Baldwin.co.nz" required/></p>
+            <br>
+            <p><span class="label">Booking Extras</span><textarea id="extras" name="booking extras" rows="3">None</textarea></p>
+            <p><span class="label">Room Review</span><textarea id="review" name="review" rows="3">Great</textarea></p>
+            <!-- Cancel button --> 
+            <button class="button", type="button">Cancel</button>&emsp;
+            <!-- submit button --> 
+            <input class="submit" type="submit" name="contact_submitted" value="Update" >
+          </div>
+        </form>
     </div>
     <div id="footer">
       Copyright &copy; SWS & KL Designs Ltd | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
     </div>
-  </div>
-</body>
+    </div>
+  </body>
 </html>

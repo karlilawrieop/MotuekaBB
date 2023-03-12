@@ -100,26 +100,26 @@
                     </select>
                 </div>
               -->
-              <p><span>Check in date</span><input class="date" type="date" id="checkindate" name="checkindate" value="" required min=""/></p>
-              <p><span>Check out date</span><input class="date" type="date" id="checkoutdate" name="checkoutdate" value="" required/></p>
+              <p><span class="label">Check in date</span><input class="date" type="date" id="checkindate" name="checkindate" value="" required min=""/></p>
+              <p><span class="label">Check out date</span><input class="date" type="date" id="checkoutdate" name="checkoutdate" value="" required/></p>
               <br>
-              <p><span>Contact number</span><input class="contact" type="number" id="phone" name="phone" placeholder="(###)-###-###" value="" required/></p>
-              <p><span>Email Address</span><input class="contact" type="email" id="email" name="email" value="" required/></p>
+              <p><span class="label">Contact number</span><input class="contact" type="tel" id="phone" name="phone" pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-###" value="" required/></p>
+              <p><span class="label">Email Address</span><input class="contact" type="email" id="email" name="email" value="" required/></p>
               <br>
-              <p><span>Booking Extras</span><textarea id="extras", name="booking extras", rows="3"></textarea></p>
-              <!-- submit button --> 
-              <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p> 
+              <p><span class="label">Booking Extras</span><textarea id="extras" name="booking extras" rows="3"></textarea></p>
               <!-- clear button --> 
-              <input class="reset" type ="reset" value = "reset form" onclick="document.value = ''">
+              <input class="reset" type ="reset" value = "reset form" onclick="document.value = ''">&emsp;
+              <!-- submit button --> 
+              <input class="submit" type="submit" name="contact_submitted" value="submit" >
               <!-- add a line break --> 
               <br>
               <br>
               <hr>
               <!-- room availability-->
               <h1>Search for room availability</h1>
-              <p><span>start date</span><input class="date" type="date" id="startdate" name="startdate" value="" /></p>
-              <p><span>end date</span><input class="date" type="date" id="enddate" name="enddate" value="" /></p>
-              <button class = "button", type="button">Search availability</button>
+              <p><span class="label">start date</span><input class="date" type="date" id="startdate" name="startdate" value="" /></p>
+              <p><span class="label">end date</span><input class="date" type="date" id="enddate" name="enddate" value="" /></p>
+              <button class="button", type="button">Search availability</button>
               <!-- tabular data for rooms -->
               <table>
                 <tr>
@@ -212,6 +212,7 @@
                   <td>S</td>
                   <td>1</td>
                 </tr>
+              </table>
             </div>
         </form>
       </div>
