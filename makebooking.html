@@ -100,10 +100,10 @@
                     </select>
                 </div>
               -->
-              <p><span class="label">Check in date</span><input class="date" type="date" id="checkindate" name="checkindate" value="" required min=""/></p>
-              <p><span class="label">Check out date</span><input class="date" type="date" id="checkoutdate" name="checkoutdate" value="" required/></p>
+              <p><span class="label">Check in date</span><input class="date" type="date" id="checkindate" name="checkindate" value="" required min="2022-06-01" max="2024-12-31"/></p>
+              <p><span class="label">Check out date</span><input class="date" type="date" id="checkoutdate" name="checkoutdate" value="" required min="2022-06-01" max="2024-12-31"/></p>
               <br>
-              <p><span class="label">Contact number</span><input class="contact" type="tel" id="phone" name="phone" pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-###" value="" required/></p>
+              <p><span class="label">Contact number</span><input class="contact" type="tel" id="phone" name="phone" pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{3,4}" placeholder="###-###-###" value="" required minlength="9" maxlength="14"/></p>
               <p><span class="label">Email Address</span><input class="contact" type="email" id="email" name="email" value="" required/></p>
               <br>
               <p><span class="label">Booking Extras</span><textarea id="extras" name="booking extras" rows="3"></textarea></p>
@@ -117,8 +117,8 @@
               <hr>
               <!-- room availability-->
               <h1>Search for room availability</h1>
-              <p><span class="label">start date</span><input class="date" type="date" id="startdate" name="startdate" value="" /></p>
-              <p><span class="label">end date</span><input class="date" type="date" id="enddate" name="enddate" value="" /></p>
+              <p><span class="label">start date</span><input class="date" type="date" id="startdate" name="startdate" value="" min="2022-06-01" max="2024-12-31"/></p>
+              <p><span class="label">end date</span><input class="date" type="date" id="enddate" name="enddate" value="" min="2022-06-01" max="2024-12-31"/></p>
               <button class="button", type="button">Search availability</button>
               <!-- tabular data for rooms -->
               <table>

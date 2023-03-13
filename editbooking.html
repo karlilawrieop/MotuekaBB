@@ -101,10 +101,10 @@
                   </select>
               </div>
             -->
-            <p><span class="label">Check in date</span><input class="date" type="date" id="checkindate" name="checkindate" value="2022-10-10" required/></p>
-            <p><span class="label">Check out date</span><input class="date" type="date" id="checkoutdate" name="checkoutdate" value="2022-12-10" required/></p>
+            <p><span class="label">Check in date</span><input class="date" type="date" id="checkindate" name="checkindate" value="2022-10-10" required min="2022-06-01" max="2024-12-31"/></p>
+            <p><span class="label">Check out date</span><input class="date" type="date" id="checkoutdate" name="checkoutdate" value="2022-12-10" required min="2022-06-01" max="2024-12-31"/></p>
             <br>
-            <p><span class="label">Contact number</span><input class="contact" type="tel" id="phone" name="phone" pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{4}" value="021-555-5555" required/></p>
+            <p><span class="label">Contact number</span><input class="contact" type="tel" id="phone" name="phone" pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{3,4}" value="021-555-5555" required minlength="9" maxlength="14"/></p>
             <p><span class="label">Email Address</span><input class="contact" type="email" id="email" name="email" value="Forrest@Baldwin.co.nz" required/></p>
             <br>
             <p><span class="label">Booking Extras</span><textarea id="extras" name="booking extras" rows="3">None</textarea></p>
