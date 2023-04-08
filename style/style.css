@@ -239,7 +239,7 @@ box-sizing: border-box;}
 { padding: 0 0 4px 0;}
  
 /* span for label styling */
-.label
+.label, .datepicker
 { float: left; 
   width: 200px; 
   text-align: left;}
